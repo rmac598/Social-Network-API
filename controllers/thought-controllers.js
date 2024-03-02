@@ -32,7 +32,7 @@ const thoughtController = {
     }
   },
   // creates a thought
-  // Tested successfully in Insomnia 2/26/2023 12:07 PM
+ 
   async createThought(req, res) {
     try {
       const thoughtData = await Thought.create(req.body);
@@ -56,7 +56,7 @@ const thoughtController = {
     }
   },
   // updates thought by ID
-  // Tested successfully in Insomnia 2/26/2023 12:10 PM
+ 
   async updateThought(req, res, err) {
     const thoughtData = await Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
