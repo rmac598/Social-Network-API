@@ -2,7 +2,7 @@ const { User } = require("../models");
 
 const userControllers = {
   // gets all users
-  // Tested successfully in Insomnia 2/26/2023 11:56 AM
+ 
   async getAllUsers(req, res) {
     try {
       const userData = await User.find().select("-__v");
@@ -14,7 +14,7 @@ const userControllers = {
     }
   },
   // gets single user
-  // Tested successfully in Insomnia 2/26/2023 11:57 AM
+
   async getSingleUser(req, res) {
     try {
       const dbUserData = await User.findOne({ _id: req.params.userId })
@@ -33,7 +33,7 @@ const userControllers = {
     }
   },
   // Creates user
-  // Tested successfully in Insomnia 2/26/2023 11:58 AM
+  
   async createUser(req, res) {
     try {
       const userData = await User.create(req.body);
@@ -44,7 +44,7 @@ const userControllers = {
     }
   },
   // Adds friend to user
-  // Tested successfully in Insomnia 2/26/2023 11:59 AM
+  
   async addFriend(req, res) {
     try {
       const userData = await User.findOneAndUpdate(
@@ -64,7 +64,7 @@ const userControllers = {
     }
   },
   // Removes friend from user
-  // Tested successfully in Insomnia 2/26/2023 12:00 PM
+
   async removeFriend(req, res) {
     try {
       const dbUserData = await User.findOneAndUpdate(
@@ -84,7 +84,7 @@ const userControllers = {
     }
   },
   // updates User
-  // Tested successfully in Insomnia 2/26/2023 12:01 PM
+  
   async updateUser(req, res) {
     try {
       const dbUserData = await User.findOneAndUpdate(
@@ -109,7 +109,6 @@ const userControllers = {
     }
   },
   // deletes User
-  // Tested successfully in Insomnia 2/26/2023 12:01 PM
   async deleteUser(req, res) {
     try {
       const dbUserData = await User.findOneAndDelete({

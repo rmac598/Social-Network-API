@@ -74,7 +74,7 @@ const thoughtController = {
     res.status(500).json(err);
   },
   // deletes thought by ID
-  // Tested successfully in Insomnia 2/26/2023 12:08 PM
+  
   async deleteThought(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndRemove({
@@ -104,7 +104,7 @@ const thoughtController = {
     }
   },
   // adds reaction to thought
-  // Tested successfully in Insomnia 2/26/2023 12:15 PM
+ 
   async addReaction(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(
@@ -124,7 +124,7 @@ const thoughtController = {
     }
   },
   // removes reaction from thought
-  // Tested successfully in Insomnia 2/26/2023 12:16 PM
+ 
   async removeReaction(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(
